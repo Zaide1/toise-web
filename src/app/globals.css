@@ -3,6 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --page-bg: #eef3ef;
+  --card: #f3f5f2;
+  --text: #223128;
+  --muted: #556158;
+  --ground: #6faf7a;
+  --sky-day-start: #7fcbff;
+  --sky-day-end: #d8f2ff;
+  --sky-night-start: #2f4b63;
+  --sky-night-end: #4d6a82;
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 24px 60px rgba(17, 28, 24, 0.12);
 }
 
 @theme inline {
@@ -20,7 +33,79 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.min-h-viewport {
+  min-height: calc(var(--vvh, 1vh) * 100);
+}
+
+
+.page-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 max(1.5rem, env(safe-area-inset-left)) 0 max(1.5rem, env(safe-area-inset-right));
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal.reveal-slow {
+  transition: opacity 1100ms ease, transform 1100ms ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.float-slow {
+  animation: float 20s ease-in-out infinite;
+}
+
+
+.twinkle {
+  animation: twinkle 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .float-slow,
+  .twinkle,
+  .reveal {
+    animation: none;
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
 }
