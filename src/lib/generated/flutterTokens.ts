@@ -20,5 +20,6 @@ export const PALETTE = {
   nightSkyBottom: "#4D6A82",
   nightSkyTop: "#2F4B63",
   pillDayMatcha: "#F3F5F7",
+  sectionLabel: "rgba(47, 62, 53, 0.349)",
   stageGround: "#6FAF7A"
 };

@@ -4,7 +4,8 @@ import type React from "react";
 
 const contentPath = path.join(process.cwd(), "src", "content", "sources.md");
 
-type InlineToken = string | { type: "strong" | "code" | "link"; text: string; href?: string };
+type InlineTokenNode = { type: "strong" | "code" | "link"; text: string; href?: string };
+type InlineToken = string | InlineTokenNode;
 
 const renderInline = (value: string, keyPrefix: string) => {
   const tokens: InlineToken[] = [];
@@ -16,7 +17,7 @@ const renderInline = (value: string, keyPrefix: string) => {
   ];
 
   while (cursor < value.length) {
-    let nextMatch: { type: InlineToken["type"]; match: RegExpExecArray } | null = null;
+    let nextMatch: { type: InlineTokenNode["type"]; match: RegExpExecArray } | null = null;
     for (const pattern of patterns) {
       pattern.regex.lastIndex = cursor;
       const match = pattern.regex.exec(value);

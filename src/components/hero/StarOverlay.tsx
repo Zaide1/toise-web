@@ -37,7 +37,7 @@ const seededRandom = (seed: number) => {
 
 export const StarOverlay = ({ isActive, opacity }: StarOverlayProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number | null>(null);
   const starsRef = useRef<Star[]>([]);
   const startTimeRef = useRef<number | null>(null);
 

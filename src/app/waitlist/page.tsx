@@ -122,13 +122,19 @@ const usePrefersReducedMotion = () => {
     const update = () => setReduced(media.matches);
 
     update();
-    if ("addEventListener" in media) {
+    if (typeof media.addEventListener === "function") {
       media.addEventListener("change", update);
       return () => media.removeEventListener("change", update);
     }
 
-    media.addListener(update);
-    return () => media.removeListener(update);
+    const legacyMedia = media as MediaQueryList & {
+      addListener?: (listener: () => void) => void;
+      removeListener?: (listener: () => void) => void;
+    };
+    if (typeof legacyMedia.addListener === "function") {
+      legacyMedia.addListener(update);
+      return () => legacyMedia.removeListener?.(update);
+    }
   }, []);
 
   return reduced;

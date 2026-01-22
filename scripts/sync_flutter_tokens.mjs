@@ -64,10 +64,25 @@ const dayPhaseText = stripLineComments(
 
 const palette = {};
 const paletteRegex =
-  /(?:static\s+const|const|final)\s+(\w+)\s*=\s*Color\(\s*0xFF([0-9A-Fa-f]{6})\s*\)/g;
+  /(?:static\s+const|const|final)\s+(\w+)\s*=\s*Color\(\s*0x([0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})\s*\)/g;
+const toCssColor = (hex) => {
+  const normalized = hex.toUpperCase();
+  if (normalized.length === 6) {
+    return `#${normalized}`;
+  }
+  const alpha = Number.parseInt(normalized.slice(0, 2), 16) / 255;
+  if (alpha >= 1) {
+    return `#${normalized.slice(2)}`;
+  }
+  const r = Number.parseInt(normalized.slice(2, 4), 16);
+  const g = Number.parseInt(normalized.slice(4, 6), 16);
+  const b = Number.parseInt(normalized.slice(6, 8), 16);
+  const alphaRounded = Math.round(alpha * 1000) / 1000;
+  return `rgba(${r}, ${g}, ${b}, ${alphaRounded})`;
+};
 let match;
 while ((match = paletteRegex.exec(paletteText)) !== null) {
-  palette[match[1]] = `#${match[2].toUpperCase()}`;
+  palette[match[1]] = toCssColor(match[2]);
 }
 
 if (Object.keys(palette).length === 0) {

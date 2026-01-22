@@ -42,7 +42,7 @@ const seededRandom = (seed: number) => {
 
 export const CloudOverlay = ({ isActive, opacity }: CloudOverlayProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number | null>(null);
   const cloudsRef = useRef<Cloud[]>([]);
   const lastTimeRef = useRef<number | null>(null);
 
