@@ -1,9 +1,32 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const flutterRoot = process.env.FLUTTER_ROOT
-  ? path.resolve(process.env.FLUTTER_ROOT)
-  : path.resolve(process.cwd(), "../frontend");
+const resolveFlutterRoot = () => {
+  if (process.env.FLUTTER_ROOT) {
+    return path.resolve(process.env.FLUTTER_ROOT);
+  }
+
+  const candidates = [
+    path.resolve(process.cwd(), "toise/frontend"),
+    path.resolve(process.cwd(), "frontend"),
+    path.resolve(process.cwd(), "../frontend"),
+  ];
+
+  const match = candidates.find((candidate) => fs.existsSync(candidate));
+  if (!match) {
+    console.error("[sync_flutter_tokens] Could not find Flutter root.");
+    console.error("[sync_flutter_tokens] Tried:");
+    for (const candidate of candidates) {
+      console.error(`- ${candidate}`);
+    }
+    process.exit(1);
+  }
+
+  return match;
+};
+
+const flutterRoot = resolveFlutterRoot();
+console.log(`[sync_flutter_tokens] Using Flutter root: ${flutterRoot}`);
 
 const palettePath = path.join(
   flutterRoot,
