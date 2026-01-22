@@ -15,6 +15,7 @@ type DeviceBezelProps = {
   alt?: string;
   fit?: "cover" | "contain";
   className?: string;
+  imageClassName?: string;
 };
 
 const DeviceBezel = ({
@@ -22,6 +23,7 @@ const DeviceBezel = ({
   alt,
   fit = "cover",
   className = "",
+  imageClassName,
 }: DeviceBezelProps) => {
   return (
     <div className={`relative ${className}`}>
@@ -35,9 +37,10 @@ const DeviceBezel = ({
             fill
             sizes="(max-width: 768px) 240px, 320px"
             className={
-              fit === "contain"
-                ? "object-cover object-top lg:object-contain"
-                : "object-cover object-top"
+              imageClassName ??
+              (fit === "contain"
+                ? "object-cover object-top "
+                : "object-cover object-top")
             }
           />
         ) : null}
@@ -95,15 +98,20 @@ export const HeroInfoBlocks = () => {
                       </h3>
                     </div>
                     <div className="relative flex flex-1 flex-col items-center lg:items-end lg:pt-8">
-                      <div className="pointer-events-none relative flex justify-center overflow-visible px-4 max-h-[320px] sm:max-h-[360px] lg:pointer-events-auto lg:static lg:flex lg:flex-1 lg:items-end lg:justify-center lg:max-h-none">
+                      <div className="pointer-events-none relative w-full px-4 h-[320px] sm:h-[360px] lg:pointer-events-auto lg:static lg:flex lg:flex-1 lg:items-end lg:justify-center lg:h-auto lg:px-0">
+                        <div className="absolute inset-x-0 bottom-0 flex justify-center lg:static lg:flex lg:items-end lg:justify-center">
+                          <div className="translate-y-[150px] sm:translate-y-[160px] lg:translate-y-0">
                         <DeviceBezel
                           imageSrc="/screenshots/meal_details_macros.webp"
                           alt="Meal details macros screen"
                           fit="contain"
-                          className="aspect-[9/19] w-[210px] translate-y-4 scale-100 origin-bottom sm:w-[210px] sm:-translate-y-4 sm:scale-100 lg:w-[210px] lg:translate-y-0 lg:scale-100"
+                          imageClassName="object-contain object-top"
+                          className="aspect-[9/19] w-[210px] sm:w-[210px] lg:w-[210px]"
                         />
+                          </div>
+                        </div>
                       </div>
-                      <div className="absolute right-0 top-0 z-20 w-full max-w-[280px] -translate-x-[90px] translate-y-[185px] rotate-2 lg:translate-y-[200px] lg:-translate-x-[80px] lg:rotate-2">
+                      <div className="absolute right-0 top-0 z-20 w-full max-w-[280px] -translate-x-[90px] translate-y-[230px] rotate-2 lg:translate-y-[200px] lg:-translate-x-[80px] lg:rotate-2">
                         <NutritionScoreCard
                           className="relative z-20 -mb-20 origin-top-right scale-70 lg:scale-80"
                           score={84}
@@ -142,14 +150,18 @@ export const HeroInfoBlocks = () => {
                       </p>
                     </div>
                     <div className="relative flex flex-1 items-end justify-center lg:justify-end">
-                    <div className="pointer-events-none relative flex justify-center overflow-visible px-4 max-h-[320px] sm:max-h-[360px] lg:pointer-events-auto lg:static lg:flex lg:flex-1 lg:items-end lg:justify-center lg:max-h-none">
-                      <DeviceBezel
-                        imageSrc="/screenshots/weekly_review_page.webp"
-                        alt="Weekly review screen"
-                        fit="contain"
-                        className="aspect-[9/19] w-[216px] translate-y-4 scale-100 origin-bottom sm:w-[240px] sm:-translate-y-4 sm:scale-100 lg:w-[210px] lg:translate-y-8 lg:scale-100"
-                      />
-                    </div>
+                      <div className="pointer-events-none relative w-full px-4 h-[320px] sm:h-[360px] lg:pointer-events-auto lg:static lg:flex lg:flex-1 lg:items-end lg:justify-center lg:h-auto lg:px-0">
+                        <div className="absolute inset-x-0 bottom-0 flex justify-center lg:static lg:flex lg:items-end lg:justify-center">
+                          <div className="translate-y-[160px] sm:translate-y-[180px] lg:translate-y-4">
+                            <DeviceBezel
+                              imageSrc="/screenshots/weekly_review_page.webp"
+                              alt="Weekly review screen"
+                              fit="contain"
+                              className="aspect-[9/19] w-[216px] sm:w-[240px] lg:w-[210px]"
+                            />
+                          </div>
+                        </div>
+                      </div>
                       <div className="absolute right-0 top-0 z-20 w-full max-w-[240px] origin-top-right scale-70 translate-x-6 rotate-2">
                         <WeeklyReviewCard />
                       </div>
@@ -186,13 +198,17 @@ export const HeroInfoBlocks = () => {
                       </p>
                     </div>
                     <div className="relative flex flex-1 items-end justify-center lg:justify-end">
-                      <div className="pointer-events-none relative flex justify-center overflow-visible px-4 max-h-[320px] sm:max-h-[360px] lg:pointer-events-auto lg:static lg:flex lg:flex-1 lg:items-end lg:justify-center lg:max-h-none">
-                      <DeviceBezel
-                        imageSrc={circadianScreenshot}
-                        alt="Toise app screenshot"
-                        fit="cover"
-                        className="aspect-[9/19] w-[216px] translate-y-4 scale-100 origin-bottom sm:w-[240px] sm:-translate-y-4 sm:scale-100 lg:w-[210px] lg:translate-y-8 lg:scale-100"
-                      />
+                      <div className="pointer-events-none relative w-full px-4 h-[320px] sm:h-[360px] lg:pointer-events-auto lg:static lg:flex lg:flex-1 lg:items-end lg:justify-center lg:h-auto lg:px-0">
+                        <div className="absolute inset-x-0 bottom-0 flex justify-center lg:static lg:flex lg:items-end lg:justify-center">
+                          <div className="translate-y-[160px] sm:translate-y-[180px] lg:translate-y-4">
+                            <DeviceBezel
+                              imageSrc={circadianScreenshot}
+                              alt="Toise app screenshot"
+                              fit="cover"
+                              className="aspect-[9/19] w-[216px] sm:w-[240px] lg:w-[210px]"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
