@@ -45,6 +45,8 @@ export const StarOverlay = ({ isActive, opacity }: StarOverlayProps) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    let rafId: number | null = null;
+
     const resize = () => {
       const parent = canvas.parentElement;
       if (!parent) return;
@@ -58,8 +60,26 @@ export const StarOverlay = ({ isActive, opacity }: StarOverlayProps) => {
     resize();
     const observer = new ResizeObserver(resize);
     observer.observe(canvas.parentElement as Element);
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible") resize();
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+    const ensureSize = () => {
+      const parent = canvas.parentElement;
+      if (!parent) return;
+      if (parent.clientWidth === 0 || parent.clientHeight === 0) {
+        rafId = requestAnimationFrame(ensureSize);
+        return;
+      }
+      resize();
+    };
+    rafId = requestAnimationFrame(ensureSize);
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", handleVisibility);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   useEffect(() => {
