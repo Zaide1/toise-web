@@ -49,7 +49,7 @@ const QUESTIONS: Question[] = [
     id: "experience",
     title: "Experience",
     type: "single",
-    options: ["New to tracking", "Done it before, fell off", "I track regularly already"],
+    options: ["New to tracking", "I've tried before", "I track regularly already"],
   },
   {
     id: "painPoints",
