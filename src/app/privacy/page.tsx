@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Toise",
-  description: "How Toise collects and uses information.",
+  title: "Privacy Policy — ChompMate",
+  description: "How ChompMate collects and uses information.",
 };
 
 export default function PrivacyPage() {
@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <div className="space-y-8">
         <header className="space-y-3">
           <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">
-            Privacy Policy (Toise)
+            Privacy Policy (ChompMate)
           </h1>
           <p className="text-sm font-semibold text-[var(--muted)]">
             <strong className="font-semibold text-[var(--text)]">Last updated:</strong> 19 January
@@ -20,9 +20,10 @@ export default function PrivacyPage() {
         </header>
 
         <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-          This Privacy Policy explains how <strong className="font-semibold text-[var(--text)]">Toise</strong>
-          ("we", "us", "our") collects, uses, and shares information when you use the{" "}
-          <strong className="font-semibold text-[var(--text)]">Toise mobile app</strong> and our{" "}
+          This Privacy Policy explains how{" "}
+          <strong className="font-semibold text-[var(--text)]">Toise LTD</strong> ("we", "us", "our")
+          collects, uses, and shares information when you use the{" "}
+          <strong className="font-semibold text-[var(--text)]">ChompMate mobile app</strong> and our{" "}
           <strong className="font-semibold text-[var(--text)]">website</strong> (including our waitlist).
         </p>
 
@@ -31,9 +32,9 @@ export default function PrivacyPage() {
           <strong className="font-semibold text-[var(--text)]">
             <a
               className="underline decoration-[var(--muted)] underline-offset-4"
-              href="mailto:hello@toise.app"
+              href="mailto:hello@chompmate.app"
             >
-              hello@toise.app
+              hello@chompmate.app
             </a>
           </strong>
         </p>
@@ -47,16 +48,16 @@ export default function PrivacyPage() {
           </p>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
             <li>
-              The <strong className="font-semibold text-[var(--text)]">Toise app</strong> (including
+              The <strong className="font-semibold text-[var(--text)]">ChompMate app</strong> (including
               account, logging, scan features, notifications, and subscriptions).
             </li>
             <li>
-              The <strong className="font-semibold text-[var(--text)]">Toise website</strong>, including
+              The <strong className="font-semibold text-[var(--text)]">ChompMate website</strong>, including
               our <strong className="font-semibold text-[var(--text)]">waitlist</strong>.
             </li>
           </ul>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            If you use third-party services through Toise (e.g., Apple, Google), their own privacy
+            If you use third-party services through ChompMate (e.g., Apple, Google), their own privacy
             policies may also apply.
           </p>
         </section>
@@ -127,7 +128,7 @@ export default function PrivacyPage() {
 
           <h3 className="text-lg font-semibold text-[var(--text)]">D) Nutrition and health-related logs (app)</h3>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            Toise is a nutrition tracking product, so we collect the data you enter or generate
+            ChompMate is a nutrition tracking product, so we collect the data you enter or generate
             through the app, including:
           </p>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
@@ -190,7 +191,7 @@ export default function PrivacyPage() {
             <li>Subscription status (active/inactive), tier/entitlement, start/end dates</li>
             <li>Purchase and renewal events</li>
             <li>App store product identifiers and a purchase receipt or transaction reference</li>
-            <li>A linkage between your Toise account and your subscription/entitlements</li>
+            <li>A linkage between your ChompMate account and your subscription/entitlements</li>
           </ul>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
             <strong className="font-semibold text-[var(--text)]">Payments are processed by Apple/Google</strong>
@@ -239,7 +240,7 @@ export default function PrivacyPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-[var(--text)]">4) AI processing (Gemini and similar services)</h2>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            Some Toise features use AI services (for example, to interpret food images, generate scan
+            Some ChompMate features use AI services (for example, to interpret food images, generate scan
             outputs, produce meal comments, or help generate plans and recommendations). When you
             use these features:
           </p>
@@ -250,7 +251,7 @@ export default function PrivacyPage() {
               and/or relevant context such as <strong className="font-semibold text-[var(--text)]">goals, preferences, meal summaries, and macros</strong>)
               in order to generate the requested output.
             </li>
-            <li>The AI provider processes the inputs and returns an output to Toise, which we then show to you.</li>
+            <li>The AI provider processes the inputs and returns an output to ChompMate, which we then show to you.</li>
             <li>
               AI providers may retain and process data according to their terms and the configuration we
               use. We aim to <strong className="font-semibold text-[var(--text)]">minimize</strong> the data shared
@@ -270,7 +271,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
             <li>
-              <strong className="font-semibold text-[var(--text)]">Contract</strong>: to provide the Toise app
+              <strong className="font-semibold text-[var(--text)]">Contract</strong>: to provide the ChompMate app
               and features you request.
             </li>
             <li>
@@ -295,7 +296,7 @@ export default function PrivacyPage() {
           </p>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
             We may share information with service providers (“processors”) who process data on our
-            behalf to operate Toise, such as:
+            behalf to operate ChompMate, such as:
           </p>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
             <li>
@@ -339,7 +340,7 @@ export default function PrivacyPage() {
             We keep data for as long as needed to:
           </p>
           <ul className="list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            <li>Provide the service, maintain your account, and support your use of Toise</li>
+            <li>Provide the service, maintain your account, and support your use of ChompMate</li>
             <li>Meet legal, accounting, or reporting requirements</li>
             <li>Resolve disputes and enforce agreements</li>
             <li>Improve product performance and reliability</li>
@@ -381,9 +382,9 @@ export default function PrivacyPage() {
             <strong className="font-semibold text-[var(--text)]">
               <a
                 className="underline decoration-[var(--muted)] underline-offset-4"
-                href="mailto:hello@toise.app"
+                href="mailto:hello@chompmate.app"
               >
-                hello@toise.app
+                hello@chompmate.app
               </a>
             </strong>
           </p>
@@ -395,7 +396,7 @@ export default function PrivacyPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-[var(--text)]">10) Children’s privacy</h2>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            Toise is not intended for children under <strong className="font-semibold text-[var(--text)]">13</strong>
+            ChompMate is not intended for children under <strong className="font-semibold text-[var(--text)]">13</strong>
             (or the minimum age required in your jurisdiction). If you believe a child has provided
             personal information, contact us and we will take appropriate steps to delete it.
           </p>

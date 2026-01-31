@@ -32,10 +32,10 @@ export const Navbar = () => {
       <div className="page-container relative flex items-center justify-between py-6">
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-white/20 text-sm font-semibold" style={{ color: navText }}>
-            T
+            C
           </div>
-          <span className="text-sm font-semibold" style={{ color: navText }}>
-            TOISE
+          <span className="hidden text-sm font-semibold sm:inline" style={{ color: navText }}>
+            CHOMPMATE
           </span>
         </div>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex" style={{ color: navText }}>

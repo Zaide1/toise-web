@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Toise",
-  description: "Terms governing use of the Toise app and website.",
+  title: "Terms of Service — ChompMate",
+  description: "Terms governing use of the ChompMate app and website.",
 };
 
 export default function TermsPage() {
@@ -11,7 +11,7 @@ export default function TermsPage() {
       <div className="space-y-8">
         <header className="space-y-3">
           <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">
-            Terms of Service (Toise)
+            Terms of Service (ChompMate)
           </h1>
           <p className="text-sm font-semibold text-[var(--muted)]">
             <strong className="font-semibold text-[var(--text)]">Last updated:</strong> 19 January
@@ -21,7 +21,7 @@ export default function TermsPage() {
 
         <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
           These Terms of Service ("Terms") govern your use of the{" "}
-          <strong className="font-semibold text-[var(--text)]">Toise</strong> mobile app and our website
+          <strong className="font-semibold text-[var(--text)]">ChompMate</strong> mobile app and our website
           (together, the "Services"). By accessing or using the Services, you agree to these Terms.
         </p>
 
@@ -34,9 +34,9 @@ export default function TermsPage() {
           <strong className="font-semibold text-[var(--text)]">
             <a
               className="underline decoration-[var(--muted)] underline-offset-4"
-              href="mailto:hello@toise.app"
+              href="mailto:hello@chompmate.app"
             >
-              hello@toise.app
+              hello@chompmate.app
             </a>
           </strong>
         </p>
@@ -46,8 +46,9 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-[var(--text)]">1) Who we are</h2>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            Toise is provided by Toise ("we", "us", "our"). We may update the name of the legal
-            entity as the business is formally incorporated; these Terms still apply.
+            ChompMate is provided by <strong className="font-semibold text-[var(--text)]">Toise LTD</strong>{" "}
+            ("we", "us", "our"). We may update the name of the legal entity as the business is formally
+            incorporated; these Terms still apply.
           </p>
         </section>
 
@@ -78,7 +79,7 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-[var(--text)]">4) The Services</h2>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            Toise helps you track meals, nutrition, and related habits, and may provide summaries,
+            ChompMate helps you track meals, nutrition, and related habits, and may provide summaries,
             targets, recommendations, and AI-assisted features (such as scan or planning outputs).
           </p>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
@@ -89,7 +90,7 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-[var(--text)]">5) Not medical advice</h2>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            Toise is provided for <strong className="font-semibold text-[var(--text)]">informational and lifestyle purposes only</strong> and is{" "}
+            ChompMate is provided for <strong className="font-semibold text-[var(--text)]">informational and lifestyle purposes only</strong> and is{" "}
             <strong className="font-semibold text-[var(--text)]">not medical advice</strong>. We are not a medical
             provider. Always seek advice from a qualified health professional before making health or
             dietary changes, especially if you have a medical condition.
@@ -106,7 +107,7 @@ export default function TermsPage() {
             You retain ownership of your User Content.
           </p>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            You grant Toise a limited license to host, process, and display your User Content solely
+            You grant ChompMate a limited license to host, process, and display your User Content solely
             to operate and improve the Services (for example, to store meals, generate totals, or
             process scan outputs).
           </p>
@@ -148,7 +149,7 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-[var(--text)]">9) Subscriptions, payments, and refunds</h2>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            Some features may require a paid subscription ("Toise Pro" or similar). Subscriptions are
+            Some features may require a paid subscription ("ChompMate Pro" or similar). Subscriptions are
             processed through Apple/Google and may be managed via{" "}
             <strong className="font-semibold text-[var(--text)]">RevenueCat</strong>.
           </p>
@@ -211,7 +212,7 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-[var(--text)]">14) Limitation of liability</h2>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            <strong className="font-semibold text-[var(--text)]">TO THE MAXIMUM EXTENT PERMITTED BY LAW, TOISE WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM OR RELATED TO YOUR USE OF THE SERVICES.</strong>
+            <strong className="font-semibold text-[var(--text)]">TO THE MAXIMUM EXTENT PERMITTED BY LAW, CHOMPMATE WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM OR RELATED TO YOUR USE OF THE SERVICES.</strong>
           </p>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
             <strong className="font-semibold text-[var(--text)]">OUR TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THE SERVICES WILL NOT EXCEED THE AMOUNT YOU PAID (IF ANY) TO USE THE SERVICES IN THE 12 MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM, OR £50 IF YOU HAVE PAID NOTHING, WHICHEVER IS GREATER.</strong>
@@ -224,7 +225,7 @@ export default function TermsPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-[var(--text)]">15) Indemnity</h2>
           <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
-            You agree to indemnify and hold Toise harmless from claims arising out of your use of the
+            You agree to indemnify and hold ChompMate harmless from claims arising out of your use of the
             Services or your violation of these Terms, to the extent permitted by law.
           </p>
         </section>
@@ -255,9 +256,9 @@ export default function TermsPage() {
             <strong className="font-semibold text-[var(--text)]">
               <a
                 className="underline decoration-[var(--muted)] underline-offset-4"
-                href="mailto:hello@toise.app"
+                href="mailto:hello@chompmate.app"
               >
-                hello@toise.app
+                hello@chompmate.app
               </a>
             </strong>
           </p>

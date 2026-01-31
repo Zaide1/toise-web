@@ -17,12 +17,12 @@ export const FloatingNav = ({
       <div className="pointer-events-auto flex w-[90vw] max-w-5xl items-center justify-between gap-6 rounded-full border border-black/10 bg-white/80 px-6 py-4 text-sm font-semibold text-[var(--text)] shadow-soft backdrop-blur sm:w-[70vw] sm:px-12 sm:py-6">
         <div className="flex items-baseline gap-3">
           <span
-            className="text-2xl font-black"
+            className="text-xl font-black sm:text-2xl"
             style={{ letterSpacing: "-1.2px", color: text }}
           >
-            toise
+            ChompMate
           </span>
-          <span className="text-xs font-semibold tracking-[0.08em] text-[var(--muted)]">
+          <span className="hidden text-xs font-semibold tracking-[0.08em] text-[var(--muted)] sm:inline">
             calorie companion
           </span>
         </div>

@@ -203,7 +203,7 @@ export const HeroInfoBlocks = () => {
                           <div className="translate-y-[160px] sm:translate-y-[180px] lg:translate-y-4">
                             <DeviceBezel
                               imageSrc={circadianScreenshot}
-                              alt="Toise app screenshot"
+                              alt="ChompMate app screenshot"
                               fit="cover"
                               className="aspect-[9/19] w-[216px] sm:w-[240px] lg:w-[210px]"
                             />

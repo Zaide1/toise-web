@@ -91,7 +91,7 @@ export const HeroSection = () => {
             A calmer way to build routines that actually stick.
           </h1>
           <p className="mt-4 max-w-[56ch] text-base leading-7 sm:text-lg" style={{ color: heroMuted }}>
-            Toise blends gentle accountability with a sky-synced interface, so your focus,
+            ChompMate blends gentle accountability with a sky-synced interface, so your focus,
             hydration, and recovery happen when your body is ready.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -122,7 +122,7 @@ export const HeroSection = () => {
             <div className="relative overflow-hidden rounded-[calc(var(--radius-lg)-6px)] border border-black/5 bg-white">
               <Image
                 src="/placeholders/app-screenshot.svg"
-                alt="Toise app preview"
+                alt="ChompMate app preview"
                 width={540}
                 height={1080}
                 sizes="(min-width: 1024px) 260px, 60vw"

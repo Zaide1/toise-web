@@ -7,7 +7,7 @@ import { Footer } from "@/components/sections/Footer";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 
-const STORAGE_KEY = "toise_waitlist_v1";
+const STORAGE_KEY = "chompmate_waitlist_v1";
 
 type WaitlistStep = "email" | "questions" | "success";
 
@@ -437,7 +437,7 @@ export default function WaitlistPage() {
                     Join the waitlist
                   </h1>
                   <p className="text-sm leading-6 text-[var(--muted)] sm:text-base">
-                    Get early access to Toise. We'll email you when your invite is ready.
+                    Get early access to ChompMate. We'll email you when your invite is ready.
                   </p>
                 </div>
 

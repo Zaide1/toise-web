@@ -2,13 +2,13 @@
 
 *Last updated: 2026-01-18*
 
-Toise is a food tracking app designed to help you build consistent, mindful tracking habits. It provides estimates and guidance, but it is **not medical advice** and is not a medical device. If you have medical conditions, allergies, eating disorders, or specific dietary needs, consult a qualified healthcare professional.
+ChompMate is a food tracking app designed to help you build consistent, mindful tracking habits. It provides estimates and guidance, but it is **not medical advice** and is not a medical device. If you have medical conditions, allergies, eating disorders, or specific dietary needs, consult a qualified healthcare professional.
 
 We use publicly available nutrition science references and food databases. We are not affiliated with or endorsed by these sources.
 
 ## Calorie recommendations
 
-To estimate a daily calorie target, Toise:
+To estimate a daily calorie target, ChompMate:
 
 * Estimates resting energy needs using a standard BMR equation
 * Applies an activity factor to estimate total daily energy expenditure (TDEE)
@@ -17,7 +17,7 @@ To estimate a daily calorie target, Toise:
 
 ### Goal adjustment guardrails
 
-Toise applies safety guardrails when adjusting calorie targets for goals:
+ChompMate applies safety guardrails when adjusting calorie targets for goals:
 
 * We cap aggressive calorie deficits to **no more than 600 kcal/day**.
 * We do not recommend targets below **800 kcal/day**.
@@ -26,7 +26,7 @@ These guardrails are based on public health guidance around very low calorie die
 
 ### Teenagers (under 18)
 
-Toise does not provide explicit calorie-deficit targets for users under 18. For teenagers, Toise focuses on healthy eating and routine-building, and encourages seeking professional guidance where weight management support is needed, in line with NICE guidance for children and young people. [6]
+ChompMate does not provide explicit calorie-deficit targets for users under 18. For teenagers, ChompMate focuses on healthy eating and routine-building, and encourages seeking professional guidance where weight management support is needed, in line with NICE guidance for children and young people. [6]
 
 **References**
 
@@ -38,7 +38,7 @@ Toise does not provide explicit calorie-deficit targets for users under 18. For 
 
 ## Macro recommendations
 
-Toise suggests protein, carbohydrate, and fat targets by:
+ChompMate suggests protein, carbohydrate, and fat targets by:
 
 * Setting protein based on body weight and your goal
 * Ensuring an adequate fat baseline
@@ -51,7 +51,7 @@ Toise suggests protein, carbohydrate, and fat targets by:
 
 ## Nutrition score
 
-Toise shows a nutrition score to summarize meal quality on a simple scale (e.g., "Needs work" to "Excellent"). The score is a **heuristic** intended to support habit-building and reflection.
+ChompMate shows a nutrition score to summarize meal quality on a simple scale (e.g., "Needs work" to "Excellent"). The score is a **heuristic** intended to support habit-building and reflection.
 
 Depending on what information is available, the score may consider:
 
@@ -68,7 +68,7 @@ Scores may be less reliable when nutrition information is incomplete. You can al
 
 ### Automated features (AI-assisted)
 
-Toise may use automated systems to assist with features such as:
+ChompMate may use automated systems to assist with features such as:
 
 * meal descriptions or summaries
 * food classification from images/text (when available)
@@ -78,7 +78,7 @@ These outputs are estimates and may be incorrect. Users can edit meals and nutri
 
 ## Data sources
 
-Toise may use public databases for nutrition label data and product lookups. When used, these sources provide factual per-100g nutrition information rather than AI-generated labels or summaries.
+ChompMate may use public databases for nutrition label data and product lookups. When used, these sources provide factual per-100g nutrition information rather than AI-generated labels or summaries.
 
 * Open Food Facts (nutrition label data, where available) [12]
 

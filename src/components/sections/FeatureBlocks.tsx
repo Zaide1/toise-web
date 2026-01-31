@@ -13,7 +13,7 @@ const BLOCKS = [
   {
     eyebrow: "Nourish gently",
     title: "Macro tiles that feel like the app, not analytics.",
-    body: "Your nutrients are laid out like the Toise home screen—simple, pastel, and effortless to scan.",
+    body: "Your nutrients are laid out like the ChompMate home screen—simple, pastel, and effortless to scan.",
     bullets: ["Pastel tiles for instant read", "Soft shadows, no harsh contrast"],
     tint: "bg-[#EEF2F7]",
   },

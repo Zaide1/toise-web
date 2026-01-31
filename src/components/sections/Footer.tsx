@@ -4,10 +4,10 @@ export const Footer = () => {
       <div className="page-container">
         <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-4 rounded-full border border-black/10 bg-white/80 px-8 py-6 text-sm text-[var(--muted)] shadow-soft backdrop-blur sm:flex-row sm:items-center sm:justify-between">
           <div className="text-sm font-semibold tracking-[0.08em] text-[var(--text)] sm:text-left">
-            toise
+            ChompMate
           </div>
           <div className="flex flex-wrap justify-center gap-4 sm:justify-start">
-            <a className="transition-opacity hover:opacity-70" href="mailto:hello@toise.app">
+            <a className="transition-opacity hover:opacity-70" href="mailto:hello@chompmate.app">
               Contact
             </a>
             <a className="transition-opacity hover:opacity-70" href="/privacy">
@@ -20,7 +20,7 @@ export const Footer = () => {
               Sources
             </a>
           </div>
-          <div className="text-xs text-center sm:text-right">© 2025 Toise. All rights reserved.</div>
+          <div className="text-xs text-center sm:text-right">© 2025 Toise LTD. All rights reserved.</div>
         </div>
       </div>
     </footer>
