@@ -15,6 +15,10 @@ const FALLBACKS = {
   dawnSkyBottom: "#A9D7FF",
   daySkyTop: "#7FCBFF",
   daySkyBottom: "#D8F2FF",
+  dayMidSkyTop: "#86CFFF",
+  dayMidSkyBottom: "#D2EEFF",
+  dayLateSkyTop: "#7ABFF5",
+  dayLateSkyBottom: "#CAE6FF",
   duskSkyTop: "#2E4E76",
   duskSkyBottom: "#6B86A0",
 };
@@ -74,6 +78,7 @@ export const resolveSkyPhase = (date: Date): SkyPhase => {
 
   const dawnStart = toMinutes(6, 30);
   const dayStart = toMinutes(9, 30);
+  const dayMid = toMinutes(13, 30);
   const duskStart = toMinutes(17, 30);
   const eveningMid = toMinutes(19, 30);
   const nightStart = toMinutes(22, 10);
@@ -85,6 +90,10 @@ export const resolveSkyPhase = (date: Date): SkyPhase => {
     dawnBottom: PALETTE.dawnSkyBottom ?? FALLBACKS.dawnSkyBottom,
     dayTop: PALETTE.daySkyTop ?? FALLBACKS.daySkyTop,
     dayBottom: PALETTE.daySkyBottom ?? FALLBACKS.daySkyBottom,
+    dayMidTop: FALLBACKS.dayMidSkyTop,
+    dayMidBottom: FALLBACKS.dayMidSkyBottom,
+    dayLateTop: FALLBACKS.dayLateSkyTop,
+    dayLateBottom: FALLBACKS.dayLateSkyBottom,
     duskTop: PALETTE.duskSkyTop ?? FALLBACKS.duskSkyTop,
     duskBottom: PALETTE.duskSkyBottom ?? FALLBACKS.duskSkyBottom,
   };
@@ -112,15 +121,21 @@ export const resolveSkyPhase = (date: Date): SkyPhase => {
     bTop = skyTokens.dayTop;
     bBottom = skyTokens.dayBottom;
     t = (minutes - dawnStart) / (dayStart - dawnStart);
+  } else if (minutes < dayMid) {
+    aTop = skyTokens.dayTop;
+    aBottom = skyTokens.dayBottom;
+    bTop = skyTokens.dayMidTop;
+    bBottom = skyTokens.dayMidBottom;
+    t = (minutes - dayStart) / (dayMid - dayStart);
   } else if (minutes < duskStart) {
-    aTop = skyTokens.dayTop;
-    aBottom = skyTokens.dayBottom;
-    bTop = skyTokens.dayTop;
-    bBottom = skyTokens.dayBottom;
-    t = 1;
+    aTop = skyTokens.dayMidTop;
+    aBottom = skyTokens.dayMidBottom;
+    bTop = skyTokens.dayLateTop;
+    bBottom = skyTokens.dayLateBottom;
+    t = (minutes - dayMid) / (duskStart - dayMid);
   } else if (minutes < eveningMid) {
-    aTop = skyTokens.dayTop;
-    aBottom = skyTokens.dayBottom;
+    aTop = skyTokens.dayLateTop;
+    aBottom = skyTokens.dayLateBottom;
     bTop = skyTokens.duskTop;
     bBottom = skyTokens.duskBottom;
     t = (minutes - duskStart) / (eveningMid - duskStart);
