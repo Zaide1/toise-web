@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 
   const answers = payload?.answers ?? {};
   const painPoints = normalizeStringArray(answers.painPoints);
-  if (painPoints.length < 1 || painPoints.length > 2) {
+  if (painPoints.length > 2) {
     return Response.json({ ok: false }, { status: 400 });
   }
 
