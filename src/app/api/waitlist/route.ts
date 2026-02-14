@@ -1,12 +1,12 @@
 import { createHash } from "crypto";
 
 type Answers = {
-  goal?: string;
-  experience?: string;
+  goal?: string | null;
+  experience?: string | null;
   painPoints?: string[];
-  loggingPref?: string;
+  loggingPref?: string | null;
   dietPrefs?: string[];
-  device?: string;
+  device?: string | null;
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,10 +18,10 @@ const normalizeStringArray = (value: unknown): string[] => {
     .filter((item) => item.length > 0);
 };
 
-const normalizeSingleAnswer = (value: unknown, fallback: string): string => {
-  if (typeof value !== "string") return fallback;
+const normalizeOptionalString = (value: unknown): string | null => {
+  if (typeof value !== "string") return null;
   const trimmed = value.trim();
-  return trimmed.length > 0 ? trimmed : fallback;
+  return trimmed.length > 0 ? trimmed : null;
 };
 
 const sha256 = (value: string) =>
@@ -58,12 +58,12 @@ export async function POST(request: Request) {
   const dietPrefsNormalized = dietPrefs.includes("None") ? ["None"] : dietPrefs;
 
   const answersNormalized: Answers = {
-    goal: normalizeSingleAnswer(answers.goal, "Other"),
-    experience: normalizeSingleAnswer(answers.experience, "New to tracking"),
+    goal: normalizeOptionalString(answers.goal),
+    experience: normalizeOptionalString(answers.experience),
     painPoints,
-    loggingPref: normalizeSingleAnswer(answers.loggingPref, "Mixed"),
+    loggingPref: normalizeOptionalString(answers.loggingPref),
     dietPrefs: dietPrefsNormalized,
-    device: normalizeSingleAnswer(answers.device, "iPhone"),
+    device: normalizeOptionalString(answers.device),
   };
 
   const headers = request.headers;
