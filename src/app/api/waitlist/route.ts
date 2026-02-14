@@ -18,6 +18,12 @@ const normalizeStringArray = (value: unknown): string[] => {
     .filter((item) => item.length > 0);
 };
 
+const normalizeSingleAnswer = (value: unknown, fallback: string): string => {
+  if (typeof value !== "string") return fallback;
+  const trimmed = value.trim();
+  return trimmed.length > 0 ? trimmed : fallback;
+};
+
 const sha256 = (value: string) =>
   createHash("sha256").update(value).digest("hex");
 
@@ -52,12 +58,12 @@ export async function POST(request: Request) {
   const dietPrefsNormalized = dietPrefs.includes("None") ? ["None"] : dietPrefs;
 
   const answersNormalized: Answers = {
-    goal: answers.goal,
-    experience: answers.experience,
+    goal: normalizeSingleAnswer(answers.goal, "Other"),
+    experience: normalizeSingleAnswer(answers.experience, "New to tracking"),
     painPoints,
-    loggingPref: answers.loggingPref,
+    loggingPref: normalizeSingleAnswer(answers.loggingPref, "Mixed"),
     dietPrefs: dietPrefsNormalized,
-    device: answers.device,
+    device: normalizeSingleAnswer(answers.device, "iPhone"),
   };
 
   const headers = request.headers;
