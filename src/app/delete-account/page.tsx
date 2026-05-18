@@ -34,6 +34,11 @@ export default function DeleteAccountPage() {
             Include the email linked to your ChompMate account. We will delete your account and
             associated app data.
           </p>
+          <p className="text-[15px] leading-relaxed text-[var(--muted)] sm:text-[16px]">
+            If you have an active subscription, cancel it through Apple App Store or Google Play
+            separately. Deleting your account does not automatically cancel store-managed
+            subscriptions.
+          </p>
         </section>
       </div>
     </main>
