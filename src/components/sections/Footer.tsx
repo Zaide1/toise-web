@@ -16,6 +16,9 @@ export const Footer = () => {
             <a className="transition-opacity hover:opacity-70" href="/terms">
               Terms
             </a>
+            <a className="transition-opacity hover:opacity-70" href="/delete-account">
+              Delete Account
+            </a>
             <a className="transition-opacity hover:opacity-70" href="/sources">
               Sources
             </a>
