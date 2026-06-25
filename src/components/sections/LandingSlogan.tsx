@@ -12,7 +12,7 @@ export const LandingSlogan = () => {
 
   return (
     <section className="bg-[var(--page-bg)]">
-      <div className="page-container flex min-h-[24vh] flex-col items-center justify-end text-center sm:min-h-[26vh]">
+      <div className="page-container flex min-h-[46vh] flex-col items-center justify-end pt-40 text-center sm:min-h-[26vh] sm:pt-0">
         <h1
           className="text-[2.4rem] font-black leading-[0.9] tracking-[-0.06em] sm:text-[3rem] lg:text-[3.4rem]"
           style={{ color: text, textShadow: "0 10px 20px rgba(0,0,0,0.12)" }}
